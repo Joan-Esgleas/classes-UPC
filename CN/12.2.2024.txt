@@ -1,0 +1,20 @@
+Irene Parada
+  EC(80% assistencia):
+    0.3*NT+0.4*NE(parciales en lua)+0.3*NP
+  Entrega1 Matlab antes viernes pero tu hazlo mañana
+
+
+Errores:
+  error absoluto = valor exacte - aproximacio => | ve - a |
+  error realtivo = error absoluto/ |valor exacte| => error absoluto / |estimacion|
+  % => error relativo
+  d cifras decimales correctas: |x-aprox(x)| < 0.5 * 10^(-d)
+                                d = inf(-log10(2|error absoluto))
+  t cifras sig correctas: (error absoluto)/valor real = 0.5 * 10^(-t)
+
+Precision y exactitud:
+  Precision alta => desviacion pequeña
+  Exactitud alta => esperanza azertada
+  
+  Si te dicen q hay error => 32.3324 +- 0.000005
+  Si te dicen q hay cota => 32.3324 +- 0.000012

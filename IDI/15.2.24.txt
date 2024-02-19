@@ -1,0 +1,6 @@
+Marta feient
+
+Objecte valid:
+  caras orientadas (ordre dels vertex)
+  orientacio coerent
+  cada aresta separa 2 caras

@@ -1,0 +1,21 @@
+profe: Xavier Oriol
+REPASAR UML:
+
+  http://www.uml.org
+
+Que es el software:
+  El software es el conjunt dels programes informatics, procediments y documentació
+    -Es desemvolupa
+    -No s'espatlla
+    -Manteniment
+    -Desenvolupar a mida
+    -Margaret Hamilton (invencio del terme de engenieria del software)
+
+Crisis del software
+  Problemes:
+    -Evolucio continua
+    -Insatisfaccio usuari
+    -Bugs
+
+Clicles de vida:
+  Analisisi requisits -> Especificacio -> Diseny -> codificacio -> prova -> Manteniment  

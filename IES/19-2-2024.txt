@@ -1,0 +1,73 @@
+Un sistema pot tenir diversos casos d'us
+Casos d'us: 
+Descripcio de serveri, una serie de esdeveniments en un sistema
+  (1.cas principal(cas esperat en el cas d'us) y 
+  exepcionals(casos no esperats pero nesecaris de tractar))
+  
+
+  Actors: elements q intervenen en el sistema
+    Ej: treure diners en un caixer:
+      client, rellotge, servei d'autorització de credit, empleat 
+  Un cas d'us te 3 dimensions (estil, format ambit)
+
+
+
+Especificacions en UML
+  Mostra: 
+    - Classes d'objectes
+    - Associacions entre classes d'objectes
+    - Atributs de lse classes d'objectes
+    - Restriccions d'integritat, gràfiques i textuals
+
+Objectes: Entitat que existeix al mon real 
+  te identitat propia y es distigible entre els altres objectes
+  - No hi ha objecte igual, tots els objectes tenen un identificador unic (OID)
+  Ej: Poma, avio amb matricula 327, smafor, contracte, factura
+
+Classe: Abstracció d'objecte (conjut de caracteristiques comunes de objectes)
+
+Atributs: parametre de una classe caracteristiqua en comú que tenen uns ojectes
+
+Atributs notacio: [1..*] (min 1 max infint) [0..1] (min null max 1)
+
+Clau externa: conjunt de atributs que identicficant un objecte dins 
+              d'una classe per definir 
+              (pot existir objecte sense clau externa Ej: guix):
+  
+  RT(restriccions textuals):
+  Claus externes:(Estudiant,dni)
+
+Associacions:
+  - Tenen un nom, una classe origen i una classe final, te direccio de lecura
+  - Tenen resticcions:
+      - Tota instancia de assiociacio te tants objectes com classes les defineixen
+        (Si una associacio te 2 coses cap de elles pot ser null)
+      - Una associacio no pot tenir instancias repedies
+  Clau externa d'una associacio: allo que no es pot repetir en una associacio
+  Les associacions poden ser de mes de dos classes, poden ser ternaries
+  Cardinalitas binaries:
+      1: Tota classe a te associacio a una y nomes una altre classe b (una persona te una mare)
+      1..*: Tota classe a te 1 associacio amb minim una altre classe b (una persona te 1 o mes nacionalitats)
+      *: Una classe a te [0, infinit] associacions a una classe b (una persona te 0 o molts coches)
+      0..1: Una classe te o 1 o cap associacio a una classe b (una persona te 1 o 0 titols d'ESO)
+      min..max: Una classe te entre min o max associacios a una classe b
+      n: Una classe te n associacions a una classe b
+
+  Cardinalitas ternaries:
+      min..max: Per cualsevol parella de clases (a,b) te entre min y maxim associacios a una classe c
+      Ej:
+        Reserva d'hotel: Classes Persona, Data, Habitacio
+        Relaccio allotgament:
+          La classe Persona tindra cardinalitat 0..2 degut a que en una mateixa Habitacio
+          en una mateixa data pot com a minim allotgarse 0 y com a maxim 2 persones
+
+          Habitacio tindra cardinalitat 0..1 degut a que una persona en una data com a mim 
+          pot estar en 0 habitacios y com a maxim en 1
+          
+          Data tindra cardinalitat * degut a que una persona pot anar a una habitacio o cap vegada com a minim
+          o infinites vegades com a maxim
+  
+  * Poden ser recursives tant les binaries com las ternaries
+    (Ojo perque les associacios recursives poden donar a coses sistemas 
+    amb requeriments infinits pertan tingues en comte a la hora de fer les restriccions)
+
